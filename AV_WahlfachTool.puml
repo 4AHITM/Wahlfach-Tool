@@ -1,0 +1,49 @@
+@startuml
+
+   left to right direction
+
+   actor Admin
+   package Configuration {
+       usecase ConfigureRoles as UC_A1
+       usecase ConfigureGroups as UC_A2
+       usecase ConfigureIdentification as UC_A3
+   }
+   Admin --> UC_A1
+   Admin --> UC_A2
+   Admin --> UC_A3
+
+   package Requesters {
+       actor Director
+       actor AV
+       actor KV
+   }
+   package LaunchRequest {
+       usecase CreateRequest as UC_ReqA
+       usecase ChooseReceivers as UC_ReqB
+       usecase ChooseIdentification as UC_ReqC
+       usecase SendRequest as UC_ReqD
+   }
+   Requesters --> LaunchRequest
+   UC_ReqA --> UC_ReqB
+   UC_ReqB --> UC_ReqC
+   UC_ReqC --> UC_ReqD
+
+   package Receivers {
+       actor Pupils
+       actor Teachers
+       actor Parents
+   }
+   package HandleRequest {
+       usecase ReceiveToken as UC_RecA
+       usecase Identification as UC_RecB
+       usecase WorkOnRequest as UC_RecC
+       usecase SendResponse as UC_RecD
+       usecase Reassurance as UC_RecE
+   }
+   Receivers --> HandleRequest
+   UC_RecA --> UC_RecB
+   UC_RecB --> UC_RecC
+   UC_RecC --> UC_RecD
+   UC_RecD --> UC_RecE
+
+@enduml
