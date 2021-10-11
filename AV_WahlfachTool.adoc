@@ -14,7 +14,7 @@
 == Use Case Diagram
 [plantuml, png]
 ----
-include::AV_WahlfachTool.png[]
+image:AV_WahlfachTool.png[]
 ----
 
 == Gesprächsnotizen
