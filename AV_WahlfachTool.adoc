@@ -41,4 +41,4 @@ image:AV_WahlfachTool.png[]
 * Addon: Request an Lehrer*innen.
 * Eltern vermutlich schwierig (2 Factor Identification).
 * Es gibt bereits (jeweils stand-alone): Lehrplanverwaltungstool, Semesterprüfungsanmeldetool.
-* Single Sign-on wäre super (Keycloak, LDAP, token).
+* Single Sign-on wäre super (Keycloak, LDAP, token, 14.10.: Active Directory, Kerberos, Spnego).
